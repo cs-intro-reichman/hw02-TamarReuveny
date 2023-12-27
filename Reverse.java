@@ -14,7 +14,6 @@ public class Reverse {
 			System.out.print(w.charAt(i));
 
 			i--;
-
 		}
 
 		System.out.println();

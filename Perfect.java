@@ -15,15 +15,14 @@ public class Perfect {
 
 			if (n == x) {
 
-				System.out.print(n + " is a perfect number since " + n + " = 1 ");
+				System.out.print(n + " is a perfect number since " + n + " = 1");
 
 				for ( int i = 2 ; i < n ; i ++) {
 
 			         if (n % i == 0) {
 
-			         	System.out.print(" + "+ i);
-
-			         	
+			         	System.out.print(" + " + i);
+         	
 			         }
 			     }
 			 } else {
