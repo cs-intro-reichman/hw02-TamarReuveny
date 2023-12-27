@@ -18,7 +18,15 @@ public class Reverse {
 
 		System.out.println();
 
-		System.out.println(w.charAt((w.length()-1)/2));
+		if ((w.length()) % 2 != 0) {
+
+			System.out.println(w.charAt((w.length()/2)));
+
+		} else {
+
+		System.out.println(w.charAt((w.length()/2)-1));
+
+		}
 
 	}
 }
