@@ -20,11 +20,11 @@ public class Reverse {
 
 		if ((w.length()) % 2 != 0) {
 
-			System.out.println(w.charAt((w.length()/2)));
+			System.out.println("The middle character is " + w.charAt((w.length()/2)));
 
 		} else {
 
-		System.out.println(w.charAt((w.length()/2)-1));
+		System.out.println("The middle character is " + w.charAt((w.length()/2)-1));
 
 		}
 
