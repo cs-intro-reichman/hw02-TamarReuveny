@@ -9,7 +9,7 @@ public class InOrder {
 
 	    System.out.print(x);
 
-		y = (int)((Math.random()) * 10);
+		int y = (int)((Math.random()) * 10);
 
 		while (y >= x) {
 
@@ -22,27 +22,3 @@ public class InOrder {
 		}
 	}
 }
-
-
-
-           // int y;
-
-	   // do { 
-
-	   // y = (int)((Math.random()) * 10);
-
-	   // if (y >= x) {
-
-	    	// System.out.print(" " + y);
-
-			// x = y;
-
-	    //} else {
-
-		//	break;
-		//} 
-
-	   // } while (true);
-
-	
-
