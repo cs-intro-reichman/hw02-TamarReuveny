@@ -18,9 +18,13 @@ public class InOrder {
 	    if (y >= x) {
 
 	    	System.out.print(" " + y);
-	    }
 
-	    x = y;
+			 x = y;
+
+	    } else {
+
+			break;
+		} 
 
 	    } while (true);
 
