@@ -7,7 +7,7 @@ public class InOrder {
 
 		int x = (int)((Math.random()) * 10);
 
-	    int y = 0;
+	    int y;
 
 	    System.out.print(x);
 
@@ -22,7 +22,7 @@ public class InOrder {
 
 	    x = y;
 
-	    } while (x > y);
+	    } while (true);
 
 	}
 }
