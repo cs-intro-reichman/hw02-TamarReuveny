@@ -7,8 +7,6 @@ public class InOrder {
 
 		int x = (int)((Math.random()) * 10);
 
-	    // int y;
-
 	    System.out.print(x);
 
 		y = (int)((Math.random()) * 10);
@@ -21,12 +19,13 @@ public class InOrder {
 
 			y = (int)((Math.random()) * 10);
 
-
 		}
+	}
+}
 
 
 
-
+           // int y;
 
 	   // do { 
 
@@ -45,5 +44,5 @@ public class InOrder {
 
 	   // } while (true);
 
-	}
-}
+	
+
