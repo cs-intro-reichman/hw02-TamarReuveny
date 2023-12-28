@@ -7,26 +7,43 @@ public class InOrder {
 
 		int x = (int)((Math.random()) * 10);
 
-	    int y;
+	    // int y;
 
 	    System.out.print(x);
 
-	    do { 
+		y = (int)((Math.random()) * 10);
 
-	    y = (int)((Math.random()) * 10);
+		while (y >= x) {
 
-	    if (y >= x) {
+			System.out.print(" " + y);
 
-	    	System.out.print(" " + y);
+			x = y;
 
-			 x = y;
+			y = (int)((Math.random()) * 10);
 
-	    } else {
 
-			break;
-		} 
+		}
 
-	    } while (true);
+
+
+
+
+	   // do { 
+
+	   // y = (int)((Math.random()) * 10);
+
+	   // if (y >= x) {
+
+	    	// System.out.print(" " + y);
+
+			// x = y;
+
+	    //} else {
+
+		//	break;
+		//} 
+
+	   // } while (true);
 
 	}
 }
