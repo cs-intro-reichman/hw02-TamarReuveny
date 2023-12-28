@@ -27,6 +27,5 @@ public class Reverse {
 		System.out.println("The middle character is " + w.charAt((w.length()/2)-1));
 
 		}
-
 	}
 }
