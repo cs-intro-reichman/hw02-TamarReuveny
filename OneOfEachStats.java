@@ -18,9 +18,9 @@ public class OneOfEachStats {
 
 		for (int i = 0 ; i < t ; i++) {
 
-	    do {
+			 x = (int)((Math.random())* 2);
 
-	        x = (int)((Math.random())* 2);
+	    do {
 
 	    	y = (int)((Math.random())* 2);
 
@@ -42,9 +42,11 @@ public class OneOfEachStats {
 				
 				fourMore++;
 			}
+
+			numberOf = 1;
 	    }
 
-			sum = sum + (2 * t);
+			sum = sum + + t;
 
 			double average = sum / t;
 
@@ -58,10 +60,16 @@ public class OneOfEachStats {
 
 			System.out.println("Number of families with 4 or more children: " + fourMore);
 
-			System.out.println("The most common number of children is " + max);
+			if (msx == fourMore) {
+
+				System.out.println("The most common number of children is " + max + " or more.");
+			}
+
+			System.out.println("The most common number of children is " + max + ".");
 	} 
-	
 }
+	
+
 
 
 		
