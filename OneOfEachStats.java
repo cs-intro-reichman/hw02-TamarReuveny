@@ -4,64 +4,65 @@ public class OneOfEachStats {
 
 		int t = Integer.parseInt(args[0]);
 
-	    int x = (int)(Math.random());
+		int x,y;
 
-	    int c = 0;
+		int numberOf = 1;
+
+		int twoChild = 0;
+		
+		int threeChild = 0;
+
+		int fourMore = 0;
+
+		double sum = 0;
+
+		for (int i = 0 ; i < t ; i++) {
 
 	    do {
 
-	    	y = (int)(Math.random());
+	        x = (int)((Math.random())* 2);
 
-	        c = c + 1;
+	    	y = (int)((Math.random())* 2);
 
-	    	   System.out.println("b ");
+			sum++;
 
-	        } while (x == y);
+	        numberOf++;
 
+	        } while (x == y); 
 
+			if (numberOf == 2) {
 
+				twoChild++;
 
-	    int c = 0;
+			}  else if (numberOf == 3) {
 
-	    int y = 2;
+				threeChild++;
 
-	    if (x < 0.5) {
+			} else {
+				
+				fourMore++;
+			}
+	    }
 
-	    	System.out.println("b ");
+			sum = sum + (2 * t);
 
-	    	do {
+			double average = sum / t;
 
-	    	   y = (int)(Math.random());
+			int max = Math.max(twoChild, Math.max(threeChild,fourMore));
 
-	    	   c = c + 1;
+			System.out.println("Average: " + average + " children to get at least one of each gender.");
 
-	    	   System.out.println("b ");
+			System.out.println("Number of families with 2 children: " + twoChild);
 
-	        } while (x == y);
+			System.out.println("Number of families with 3 children: " + threeChild);
 
-	           System.out.println("g");
+			System.out.println("Number of families with 4 or more children: " + fourMore);
 
-	    } else {
+			System.out.println("The most common number of children is " + max);
+	} 
+	
+}
 
-               System.out.println("g ");
-
-	    	do {
-
-	    	   y = (int)(Math.random());
-
-	    	   c = c + 1;
-
-	    	   System.out.println("g ");
-
-	        } while (x == y);
-
-	           System.out.println("b");
-	       }
-
-	     }
-
-            System.out.println("You made it... and you now have " + (c + 2) + " children.");
-		}
 
 		
      
