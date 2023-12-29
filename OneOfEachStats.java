@@ -33,8 +33,6 @@ public class OneOfEachStats {
 
 		Random generator = new Random(seed);
 
-		System.out.println(seed);
-
 		int x;
 
 		int numberOf = 1;
@@ -52,8 +50,6 @@ public class OneOfEachStats {
 			do {
 
 	    	   x =(int)((generator.nextDouble()*2 + 1));
-
-			   System.out.println(x);
 
 	    	   sum++;
 
