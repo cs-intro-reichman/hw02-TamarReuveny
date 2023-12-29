@@ -27,9 +27,15 @@ public class OneOfEachStats {
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
 
-		int t = Integer.parseInt(args[0]);
+		int T = Integer.parseInt(args[0]);
 
-		int x,y;
+		int seed = Integer.parseInt(args[1]);
+
+		Random generator = new Random(seed);
+
+		//System.out.println(seed);
+
+		double x;
 
 		int numberOf = 1;
 
@@ -41,19 +47,17 @@ public class OneOfEachStats {
 
 		double sum = 0;
 
-		for (int i = 0 ; i < t ; i++) {
+		for (int i = 0 ; i < T ; i++) {
 
-			 x = (int)((Math.random())* 2);
+		    do {
 
-	    do {
+	    	   x = (int)(generator.nextDouble() * 2);
 
-	    	y = (int)((Math.random())* 2);
+	    	   sum++;
 
-			sum++;
+	           numberOf++;
 
-	        numberOf++;
-
-	        } while (x == y); 
+	           } while (x == seed);
 
 			if (numberOf == 2) {
 
@@ -71,9 +75,9 @@ public class OneOfEachStats {
 			numberOf = 1;
 	    }
 
-			sum = sum + + t;
+			sum = sum + T;
 
-			double average = sum / t;
+			double average = sum / T;
 
 			int max = Math.max(twoChild, Math.max(threeChild,fourMore));
 
@@ -87,10 +91,12 @@ public class OneOfEachStats {
 
 			if (max == fourMore) {
 
-				System.out.println("The most common number of children is " + max + " or more.");
-			}
+				System.out.println("The most common number of children is 4 or more.");
+
+			} else {
 
 			System.out.println("The most common number of children is " + max + ".");
+			}
 	} 
 }
 		    
