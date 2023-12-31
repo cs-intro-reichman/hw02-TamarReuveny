@@ -53,7 +53,7 @@ public class OneOfEachStats {
             } else {
 
                 do {
-					
+
                     x = generator.nextDouble();
 
                     sum++;
@@ -84,14 +84,24 @@ public class OneOfEachStats {
         int max = Math.max(twoChild, Math.max(threeChild, fourMore));
 
         System.out.println("Average: " + average + " children to get at least one of each gender.");
+
         System.out.println("Number of families with 2 children: " + twoChild);
+
         System.out.println("Number of families with 3 children: " + threeChild);
+
         System.out.println("Number of families with 4 or more children: " + fourMore);
 
         if (max == fourMore) {
+
             System.out.println("The most common number of children is 4 or more.");
-        } else {
-            System.out.println("The most common number of children is " + max + ".");
+
+        } else if (max == threeChild) {
+
+			System.out.println("The most common number of children is 3.");
+
+		} else {
+
+            System.out.println("The most common number of children is 2.");
         }
     }
 }
