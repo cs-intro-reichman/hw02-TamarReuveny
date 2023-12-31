@@ -22,7 +22,7 @@ public class OneOfEachStats {
 		//// Where "rnd" is the variable that stores the generated random value.
 		//// In this version of the program, replace this statement with:
 		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
+		////This statement will generate a random value in the range [0,1),
 		//// just like you had in the previous version, except that the 
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
@@ -31,9 +31,7 @@ public class OneOfEachStats {
 
 		int seed = Integer.parseInt(args[1]);
 
-		Random generator = new Random(seed);
-
-		int x;
+		Random generator = new Random(seed); 
 
 		int numberOf = 1;
 
@@ -45,20 +43,39 @@ public class OneOfEachStats {
 
 		double sum = 0;
 
+		double x;
+
 		for (int i = 0 ; i < T ; i++) {
 
-			do {
+	    double number = generator.nextDouble();
 
-	    	   x =(int)((generator.nextDouble()*2 + 1));
+	    if (number < 0.5) {
+
+	    	do {
+
+	    	   x = generator.nextDouble();
 
 	    	   sum++;
 
 	           numberOf++;
 
-	           } while (x == seed);
+	           } while (x < 0.5);
 
-			if (numberOf == 2) {
+	    } else {
 
+	    	do {
+
+	    	   x = generator.nextDouble();
+
+	    	    sum++;
+
+	           numberOf++;
+
+	           } while (x >= 0.5);
+	       }
+
+              if (numberOf == 2) {
+  
 				twoChild++;
 
 			}  else if (numberOf == 3) {
@@ -71,7 +88,7 @@ public class OneOfEachStats {
 			}
 
 			numberOf = 1;
-	    }
+		}
 
 			sum = sum + T;
 
@@ -97,6 +114,5 @@ public class OneOfEachStats {
 			}
 	} 
 }
-		    
-	
 
+		    
